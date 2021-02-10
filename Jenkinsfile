@@ -14,6 +14,11 @@ pipeline {
                 // Python dependencies
                 sh "pip install -r requirements.txt"
             }
+        stage('Initialize docker'){
+                def dockerHome = tool 'docker'
+                env.PATH = "${dockerHome}/bin:${env.PATH}"
+            }
+        
         }
    }
 
