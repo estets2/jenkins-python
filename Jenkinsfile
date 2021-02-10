@@ -1,11 +1,7 @@
 #!groovy
 
 pipeline {
-    agent {
-        docker {
-            image 'python'
-        }
-    }
+    tools {python "python"}
 
     stages {
         stage('Environment preparation') {
