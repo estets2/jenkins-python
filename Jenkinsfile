@@ -1,5 +1,3 @@
-#!groovy
-
 pipeline {
     agent {
         docker { image 'python3:latest' }
@@ -16,6 +14,7 @@ pipeline {
                 // Python dependencies
                 sh "pip install -r requirements.txt"
             }
+        }
     }
     post {
         always {
