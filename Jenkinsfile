@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    docker {
-      image 'estets2/inbound-agent'
+    node {
+      label 'kubernetes'
     }
 
   }
