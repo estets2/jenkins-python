@@ -1,6 +1,6 @@
-pipeline {
+epipeline {
     agent {
-        docker { image 'python3:latest' }
+        kubernetes { image 'python3:latest' }
     }
     stages {
         stage('Test') {
